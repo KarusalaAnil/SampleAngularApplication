@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'SampleAngularApplication'`, () => {
+  it(`should have as title 'SampleApplication'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('SampleAngularApplication');
+    expect(app.title).toEqual('SampleApplication');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('SampleAngularApplication app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('SampleApplication app is running!');
   });
 });

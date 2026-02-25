@@ -1,4 +1,57 @@
-# SampleAngularApplication
+home :
+    String Interpolation {{}}
+    one way data binding , two way data binding ,event binding and property binding.
+    parent child relation : Data passing Parent to child and Child to Parent (@Input , @Output , => core module)
+    
+    {{}},@Input , @Output ,EventEmitter
+
+home and employeer module with Routing enabled :
+Enabled routing with router injection (Router = > router module).
+
+    constructor(private router : Router){}
+
+Shared Module: Created this for common for All required modules (Common module included => commons module => support all angular)
+FormModule 
+
+Child routing :
+    Home = > display componet : 
+    {
+        path: 'display', component: DisplayComponent,
+        children: [
+        {
+            path: 'child-route', component: ChildRouteComponent
+        }
+
+        ]
+    },
+
+Angular life cycle Hooks:
+    Employeer module => company leave component
+
+        company-leaves.component.ts:12 constructor loaded
+        company-leaves.component.ts:38 ngOnInit called
+        company-leaves.component.ts:35 ngDoCheck called
+        company-leaves.component.ts:32 ngAfterContentInit called
+        company-leaves.component.ts:29 ngAfterContentChecked called
+        company-leaves.component.ts:26 ngAfterViewInit called
+        company-leaves.component.ts:23 ngAfterViewChecked called
+        company-leaves.component.ts:35 ngDoCheck called
+        company-leaves.component.ts:29 ngAfterContentChecked called
+        company-leaves.component.ts:23 ngAfterViewChecked called
+        company-leaves.component.ts:35 ngDoCheck called
+        company-leaves.component.ts:29 ngAfterContentChecked called
+        company-leaves.component.ts:23 ngAfterViewChecked called
+
+
+
+
+
+
+
+
+
+
+# SampleApplication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 

@@ -1,0 +1,29 @@
+<div style="width: 100%;">
+
+  <div style="width: 30%;float: left;border-right: 1px solid; padding:1rem;margin: 1rem;">
+    <h1>Display Component</h1>
+    <!--  one way data binding -->
+    <p>Welcome to {{appName}} with {{version}}</p>
+
+    <p>Create one way data binding with input with value property binding</p>
+    <input name="firstName" type="text" [value]="firstName">
+    <p>Enter first name : {{firstName}}</p>
+    <strong>First Name value does not appier because it one way data binding</strong>
+    <h4 class="heading"> Let'd go for two way data binding</h4>
+    <label for="fullName">Enter Full Name : </label>
+    <input name="fullName" type="text" [value]="fullName" [(ngModel)]="fullName">
+    <p>fullName : {{fullName}}</p>
+    <p>To change First Name while use event</p>
+    <button type="submit" (click)="changeName($event)">Change</button>
+    <button type="submit" (click)="childRoute()">Child Route</button>
+  </div>
+  <div style="width: 25%;float: left;border-right: 1px solid;padding:1rem;margin: 1rem;">
+    <h3>Remaing will continue on Child Components</h3>
+    <app-child-data-passing [firstName]="firstName" [fullName]="fullName"
+      (updateFullNmae)="handleFullName($event)"></app-child-data-passing>
+  </div>
+  <div style="width: 30%;float: left; padding:1rem;margin: 1rem;">
+    <h3>Child Routing</h3>
+    <router-outlet></router-outlet>
+  </div>
+</div>

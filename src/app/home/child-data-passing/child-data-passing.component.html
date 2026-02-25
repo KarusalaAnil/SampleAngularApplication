@@ -1,0 +1,9 @@
+<p>child-data-passing works!</p>
+<h4>To display Parent value Here</h4>
+<P>Parent Details : <br />firstName:{{firstName}},<br />fullName:{{fullName}}</P>
+<h4>To Pass values from child to Parent</h4>
+<!-- <label>firstName : </label><input type="text" name="firstName" [(ngModel)]="firstName"><br> -->
+<label>Update FullName From Child to parent: </label><input type="text" name="updateFullName"
+    [(ngModel)]="updateFullName"><br>
+<button (click)="clickUpdate()">updated Full Name</button>
+<button type="submit" (click)="childRoute()" style="padding: .5rem;margin-left:1rem">Child Route</button>
