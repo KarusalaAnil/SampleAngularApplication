@@ -1,4 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { AppService } from 'src/app/core/services/app.service';
 
 @Component({
   selector: 'app-company-leaves',
@@ -8,11 +9,29 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 export class CompanyLeavesComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterContentInit,
   AfterContentChecked, AfterViewInit, AfterViewChecked {
 
-  constructor() {
+  constructor(private api : AppService) {
     console.log('constructor loaded');
   }
 
+  ngOnInit(): void {
+    console.log('ngOnInit called');
+    /**Calling api services */
+    this.initialLoading(); // 
+  }
+  initialLoading(){
+    this.doCurdOperations()
 
+  }
+  doCurdOperations(){
+    this.api.create().subscribe((data)=>{
+
+      console.log(data);
+      
+
+    })
+
+
+  }
 
 
   /** Angular life cycle Hooks */
@@ -34,9 +53,7 @@ export class CompanyLeavesComponent implements OnInit, OnDestroy, OnChanges, DoC
   ngDoCheck(): void {
     console.log('ngDoCheck called');
   }
-  ngOnInit(): void {
-    console.log('ngOnInit called');
-  }
+
   ngOnChanges(changes: SimpleChanges): void {
     console.log('ngOnChanges called');
   }

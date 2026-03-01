@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { EmployeerRoutingModule } from './employeer-routing.module';
 import { CompanyLeavesComponent } from './company-leaves/company-leaves.component';
+import { EmployeerRoutingModule } from './employeer-routing.module';
+
 
 
 @NgModule({
