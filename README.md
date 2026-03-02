@@ -44,6 +44,16 @@ Angular life cycle Hooks:
 
 
 
+Created Interceptor and updated in 
+shared modules
+
+Added Pipes   
+Leave component :
+Create reactive Form Examples 2 :
+ setValue  ( fully uppdate ) ,  setPatch(Prtially update)
+ 
+Create FormGroup and FormController.
+
 
 
 

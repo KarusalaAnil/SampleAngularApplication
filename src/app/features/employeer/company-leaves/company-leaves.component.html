@@ -1,4 +1,15 @@
-<p>company-leaves works!</p>
-<p>Company Name: {{'HCL Tech' | uppercase}}</p>
-<p>Employee Name: {{'anil karusala' | titlecase}}</p>
-<p>Employee Salary: {{125000.56789 | number:'0.1-2' }}</p> <!--decimal-->   
+<div *ngIf="!activateReactForms">
+
+    <p>company-leaves works!</p>
+    <p>Company Name: {{'HCL Tech' | uppercase}}</p>
+    <p>Employee Name: {{'anil karusala' | titlecase}}</p>
+    <p>Employee Salary: {{125000.56789 | number:'0.1-2' }}</p> <!--decimal-->
+    Select DOB : <input type="date" [(ngModel)]="birthDate">
+    <p>Age: {{birthDate | age}}</p>
+    <hr>
+    <button (click)="reactiveFormModuleFun()">ReactiveFormModule</button>
+</div>
+<div *ngIf="activateReactForms">
+
+    <app-contacts></app-contacts>
+</div>

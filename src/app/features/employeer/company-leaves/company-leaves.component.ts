@@ -1,4 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { AppService } from 'src/app/core/services/app.service';
 
 @Component({
@@ -9,29 +10,36 @@ import { AppService } from 'src/app/core/services/app.service';
 export class CompanyLeavesComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterContentInit,
   AfterContentChecked, AfterViewInit, AfterViewChecked {
 
-  constructor(private api : AppService) {
+  constructor(private api: AppService) {
     console.log('constructor loaded');
   }
+
+  birthDate: any;
+  activateReactForms: any = false;
+
+  
 
   ngOnInit(): void {
     console.log('ngOnInit called');
     /**Calling api services */
     this.initialLoading(); // 
   }
-  initialLoading(){
+  initialLoading() {
     this.doCurdOperations()
-
   }
-  doCurdOperations(){
-    this.api.create().subscribe((data)=>{
-
+  doCurdOperations() {
+    this.api.create().subscribe((data) => {
       console.log(data);
-      
-
     })
-
-
   }
+  reactiveFormModuleFun() {
+    this.activateReactForms = true;
+  }
+  reactiveFormModuleFun1() {
+    this.activateReactForms = true;
+  }
+
+  
 
 
   /** Angular life cycle Hooks */
